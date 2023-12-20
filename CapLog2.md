@@ -20,3 +20,4 @@
 
 `11:53`    I am back, I needed a moment with the lord.
 
+`12:24` this video is wrapping up, will be jumping int this controller soon.
