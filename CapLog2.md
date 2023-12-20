@@ -13,3 +13,5 @@
 `8:51` these video have been helpful, I will be getting bakc to coding soon
 
 `9:43` still reaserching
+
+`10:35` almost done researching
