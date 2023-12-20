@@ -28,3 +28,5 @@
 `2:53` I guess the next thing to do is get this employee index to work
 
 `3:00` Wow that was quick, I got tthe employee index to wrok pretty fast. I guess I just need to watch my naming conventions more
+
+`3:05` holy moley, that same fix also saved the service index! sometimes you get lucky i guess 

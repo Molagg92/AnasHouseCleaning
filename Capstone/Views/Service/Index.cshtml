@@ -5,11 +5,12 @@
 @using Capstone.Models;
 
 
-<h1>services</h1>
+<h1>This is a TEST FOR SERVICE INDEX</h1>
+<hr />
 
 @if (@Model.Count == 0)
 {
-  <h3>No services have been added yet!</h3>
+  <b>No services have been added yet!</b>
 } 
 else
 {
@@ -20,6 +21,6 @@ else
     }
   </ul>
 }
-
+<hr />
 <p>@Html.ActionLink("Add new service", "Create")</p>
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
