@@ -1,6 +1,6 @@
-# _ana's House Cleaning1_
+# Ana's House Cleaning!
 
-#### _A Capstone project , still in the works, brough to you by Erik Zambrano._
+#### A Capstone project , still in the works, brough to you by Erik Zambrano.
 
 #### By Erik Z./Molagg92
 
@@ -13,7 +13,6 @@
 
 ## Description
 
-![Alt text](image.png)
 
 _A list of Clients, employees, Services, and a calandar to tie it all togetehr!_
 
