@@ -15,3 +15,8 @@
 `9:43` still reaserching
 
 `10:35` almost done researching
+
+=========================================\
+
+`11:53`    I am back, I needed a moment with the lord.
+
