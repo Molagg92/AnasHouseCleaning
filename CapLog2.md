@@ -9,3 +9,5 @@
 `7:48` checkingin again, still researching.
 
 `8:19` another check in. swtiching to youtube video
+
+`8:51` these video have been helpful, I will be getting bakc to coding soon
