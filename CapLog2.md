@@ -32,3 +32,5 @@
 `3:05` holy moley, that same fix also saved the service index! sometimes you get lucky i guess 
 
 `3:26` I am in the middle of writting my client model into the app. I should do a migration soon
+
+`3:33` : once again, I made a view work, I now have a working Client model view controller working. now to give everything CRUD. oh boy...
