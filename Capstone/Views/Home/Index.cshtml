@@ -1,0 +1,38 @@
+@{
+    Layout = "_Layout";
+}
+
+@using Capstone.Models;
+
+<h1>This is a test for the HOME INDEX!</h1>
+
+<hr>
+
+<h4>Employees</h4>
+@if (Model["employees"].Length == 0)
+{
+  <p>No employees have been added yet!</p>
+} 
+<ul>
+  @foreach (Employee emp in Model["employees"])
+  {
+    <li>@Html.ActionLink(@emp.Name, "Details", "Employee", new { id = @emp.EmployeeId})</li>
+  }
+</ul>
+
+<hr>
+
+<h4>services</h4>
+@if (Model["services"].Length == 0)
+{
+  <p>No services have been added yet!</p>
+} 
+<ul>
+  @foreach (Service serv in Model["services"])
+  {
+    <li>@Html.ActionLink(@serv.Name, "Details", "Service", new { id = @serv.ServiceId})</li>
+  }
+</ul>
+
+<p>@Html.ActionLink("See all employees", "Index", "Employee")</p> 
+<p>@Html.ActionLink("See all services", "Index", "Service")</p> 
