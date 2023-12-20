@@ -7,3 +7,5 @@
 `7:25` just checking in, i am a slow reader.
 
 `7:48` checkingin again, still researching.
+
+`8:19` another check in. swtiching to youtube video
