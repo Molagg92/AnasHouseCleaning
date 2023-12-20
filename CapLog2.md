@@ -23,3 +23,6 @@
 `12:24` this video is wrapping up, will be jumping int this controller soon.
 
 `1:08` : going to take a break, i need a shower
+=============================================\
+
+`2:53` I guess the next thing to do is get this employee index to work
