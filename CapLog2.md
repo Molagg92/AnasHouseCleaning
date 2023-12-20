@@ -30,3 +30,5 @@
 `3:00` Wow that was quick, I got tthe employee index to wrok pretty fast. I guess I just need to watch my naming conventions more
 
 `3:05` holy moley, that same fix also saved the service index! sometimes you get lucky i guess 
+
+`3:26` I am in the middle of writting my client model into the app. I should do a migration soon

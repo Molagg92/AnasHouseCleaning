@@ -9,5 +9,7 @@ namespace Capstone.Models
     [Required(ErrorMessage = "The Employee's name can't be empty!")]
     public string Name { get; set; }
     public List<ServiceEmployeeEntity> ServiceEmployeeEntities{ get; set; }
+    public int ClientId { get; set; }
+    public Client Client { get; set; }
   }
 }
