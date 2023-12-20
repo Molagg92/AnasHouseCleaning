@@ -21,3 +21,5 @@
 `11:53`    I am back, I needed a moment with the lord.
 
 `12:24` this video is wrapping up, will be jumping int this controller soon.
+
+`1:08` : going to take a break, i need a shower
