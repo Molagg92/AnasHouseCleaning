@@ -11,3 +11,5 @@
 `8:19` another check in. swtiching to youtube video
 
 `8:51` these video have been helpful, I will be getting bakc to coding soon
+
+`9:43` still reaserching
