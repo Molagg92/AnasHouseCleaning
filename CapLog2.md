@@ -26,3 +26,5 @@
 =============================================\
 
 `2:53` I guess the next thing to do is get this employee index to work
+
+`3:00` Wow that was quick, I got tthe employee index to wrok pretty fast. I guess I just need to watch my naming conventions more

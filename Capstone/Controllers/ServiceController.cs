@@ -7,17 +7,17 @@ using Capstone.Models;
 
 namespace Capstone.Controllers
 {
-  public class EmployeesController : Controller
+  public class ServiceController : Controller
   {
     private readonly CapstonePageContext _db;
-    public EmployeesController(CapstonePageContext db)
+    public ServiceController(CapstonePageContext db)
     {
       _db = db;
     }
 
     public ActionResult Index()
     {
-      List<Employee> model = _db.Employees.ToList();
+      List<Service> model = _db.Services.ToList();
       return View(model);
     }
 
