@@ -3,3 +3,5 @@
 `6:18` addeda  README
 
 `6:58` have been learning more about MYSQL just incase i run into more issues
+
+`7:25` just checking in, i am a slow reader.
