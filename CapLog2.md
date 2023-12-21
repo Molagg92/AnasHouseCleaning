@@ -34,3 +34,6 @@
 `3:26` I am in the middle of writting my client model into the app. I should do a migration soon
 
 `3:33` : once again, I made a view work, I now have a working Client model view controller working. now to give everything CRUD. oh boy...
+
+
+`4:00` Employee create route is working !
