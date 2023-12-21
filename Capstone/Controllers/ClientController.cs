@@ -26,15 +26,15 @@ namespace Capstone.Controllers
     }
 
     [HttpPost]
-    public ActionResult Create(Employee employee)
+    public ActionResult Create(Client client)
     {
       if (!ModelState.IsValid)
       {
-        return View(employee);
+        return View(client);
       }
       else
       {
-        _db.Employees.Add(employee);
+        _db.Clients.Add(client);
         _db.SaveChanges();
         return RedirectToAction("Index");
       }

@@ -39,6 +39,14 @@ namespace Capstone.Controllers
         return RedirectToAction("Index");
       }
     }
+    public ActionResult Details(int id)
+        {
+        	Employee thisEmployee = _db.Employees
+																		.Include(employee => employee.ServiceEmployeeEntities)
+																		.ThenInclude(join => join.Service)
+																		.FirstOrDefault(employee => employee.EmployeeId == id);
+      return View(thisEmployee);
+        }
    } 
 }
 

@@ -1,0 +1,36 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Capstone.Models
+@model Capstone.Models.Employee
+
+<h2>Employee Details</h2>
+<hr />
+<h3>@Html.DisplayFor(model => model.Name)</h3>  
+
+@if (@Model.ServiceEmployeeEntities.Count == 0)
+{
+  <h3> --no Services have been added to this engineer yet-- </h3>
+} 
+else
+{
+  @* <h4>Services:</h4>
+  <ul>
+    @foreach(ServiceEmployeeEntity join in Model.ServiceEmployeeEntities)
+    {
+      <li>Service: @join.Service.Name-</li>
+      @using (Html.BeginForm("DeleteJoin", "Engineer"))
+      {
+        @Html.Hidden("joinId", @join.ServiceEmployeeEntityId)
+        <input type="submit" value="Delete"/>
+      }
+    }
+  </ul> *@
+}
+
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Edit engineer or Service", "Edit", new { id = Model.EmployeeId })</p>
+<p>@Html.ActionLink("Delete Employee", "Delete", new { id = Model.EmployeeId })</p>
+<p>@Html.ActionLink("Add a Service", "AddService", new { id = Model.EmployeeId })</p>
