@@ -40,12 +40,38 @@ namespace Capstone.Controllers
       }
     }
     public ActionResult Details(int id)
-        {
-        	Employee thisEmployee = _db.Employees
-																		.Include(employee => employee.ServiceEmployeeEntities)
-																		.ThenInclude(join => join.Service)
-																		.FirstOrDefault(employee => employee.EmployeeId == id);
+    {
+      Employee thisEmployee = _db.Employees
+                                .Include(employee => employee.ServiceEmployeeEntities)
+                                .ThenInclude(join => join.Service)
+                                .FirstOrDefault(employee => employee.EmployeeId == id);
       return View(thisEmployee);
+    }
+    public ActionResult Edit(int id)
+    {
+      Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+      return View(thisEmployee);
+    }
+    [HttpPost]
+    public ActionResult Edit(Employee employee)
+    {
+      _db.Employees.Update(employee);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    public ActionResult Delete(int id)
+        {
+          Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+          return View(thisEmployee);
+        }
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+          Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+          _db.Employees.Remove(thisEmployee);
+          _db.SaveChanges();
+          return RedirectToAction("Index");
         }
    } 
 }
