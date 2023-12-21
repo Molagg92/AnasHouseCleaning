@@ -69,3 +69,7 @@
 `9:55` made the delete route on my employee, so far so good.
 
 `10:56` reading about authentication/authorization
+
+=========================================\
+
+`12:24` back frmo a break
