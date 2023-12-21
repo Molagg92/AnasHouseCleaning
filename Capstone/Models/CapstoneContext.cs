@@ -15,10 +15,10 @@ namespace Capstone.Models
         modelBuilder.Entity<ServiceEmployeeEntity>()
             .HasKey(ps => new { ps.EmployeeId, ps.ServiceId });
             
-        modelBuilder.Entity<Service>()
-            .HasOne(s => s.Client)
-            .WithMany(c => c.Services)
-            .HasForeignKey(s => s.ClientId);
+        // modelBuilder.Entity<Service>()
+        //     .HasOne(s => s.Client)
+        //     .WithMany(c => c.Services)
+        //     .HasForeignKey(s => s.ClientId);
     }
    }
 }

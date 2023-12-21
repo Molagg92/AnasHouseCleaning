@@ -6,10 +6,10 @@ namespace Capstone.Models
   public class Service
   {
     public int ServiceId { get; set; }
-    [Required(ErrorMessage = "The Employee's name can't be empty!")]
+    [Required(ErrorMessage = "The Service's name can't be empty!")]
     public string Name { get; set; }
     public List<ServiceEmployeeEntity> ServiceEmployeeEntities{ get; set; }
-    public int ClientId { get; set; }
-    public Client Client { get; set; }
+    // public int ClientId { get; set; }
+    // public Client Client { get; set; }
   }
 }

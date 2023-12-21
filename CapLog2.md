@@ -47,3 +47,5 @@
 `5:45` creating instances of these objects is turning out to be a problem
 
 `6:26` i am so tired of dealing with this wall i cant break
+
+`6:51` dude it wasnt working because I am super dumb, it just didnt know what to do with the rest od the info in with the one to one relathinship
