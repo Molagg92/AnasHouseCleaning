@@ -59,3 +59,5 @@
 `6:29` So it turns out I had a few migrations pending, wich was causeing a mess with my foreign key constraints in the SQL schema. I fixed it! I think I actually have a many to many with services-employees, and a one to many with clients-services!
 
 `6:46` researching, I get the feeling I am getting this error, because of my relationships. Service might have to be associated witha  client
+
+`7:30` still researching. I think y services and my calendar can be one in the same.
