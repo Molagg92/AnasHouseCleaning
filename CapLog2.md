@@ -61,3 +61,5 @@
 `6:46` researching, I get the feeling I am getting this error, because of my relationships. Service might have to be associated witha  client
 
 `7:30` still researching. I think y services and my calendar can be one in the same.
+
+`8:30` Reaserch almost finished
