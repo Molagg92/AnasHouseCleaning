@@ -60,19 +60,19 @@ namespace Capstone.Controllers
       return RedirectToAction("Index");
     }
     public ActionResult Delete(int id)
-        {
-          Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
-          return View(thisEmployee);
-        }
+    {
+      Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+      return View(thisEmployee);
+    }
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-          Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
-          _db.Employees.Remove(thisEmployee);
-          _db.SaveChanges();
-          return RedirectToAction("Index");
-        }
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+      _db.Employees.Remove(thisEmployee);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
    } 
 }
 
