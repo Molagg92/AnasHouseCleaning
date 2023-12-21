@@ -20,7 +20,25 @@ namespace Capstone.Controllers
       List<Service> model = _db.Services.ToList();
       return View(model);
     }
+    public ActionResult Create()
+    {
+      return View();
+    }
 
+    [HttpPost]
+    public ActionResult Create(Service service)
+    {
+      if (!ModelState.IsValid)
+      {
+        return View(service);
+      }
+      else
+      {
+        _db.Services.Add(service);
+        _db.SaveChanges();
+        return RedirectToAction("Index");
+      }
+    }
    } 
 }
 

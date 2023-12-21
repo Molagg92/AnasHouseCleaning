@@ -41,3 +41,5 @@
 `4:19` researching tehh rest of the crud methods
 
 `4:45` : still researching
+
+`5:12` made the Create route for clients and services
