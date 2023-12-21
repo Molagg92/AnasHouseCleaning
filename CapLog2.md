@@ -37,3 +37,5 @@
 
 
 `4:00` Employee create route is working !
+
+`4:19` researching tehh rest of the crud methods
