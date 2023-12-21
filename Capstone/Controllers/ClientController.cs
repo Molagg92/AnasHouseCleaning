@@ -39,5 +39,13 @@ namespace Capstone.Controllers
         return RedirectToAction("Index");
       }
     }
-   } 
+    public ActionResult Details(int id)
+{
+    Client thisClient = _db.Clients
+                            .Include(client => client.Services)
+                            .FirstOrDefault(client => client.ClientId == id);
+    return View(thisClient);
+}
+
+  } 
 }
