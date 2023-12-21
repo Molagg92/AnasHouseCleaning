@@ -63,3 +63,5 @@
 `7:30` still researching. I think y services and my calendar can be one in the same.
 
 `8:30` Reaserch almost finished
+
+`9:30` sweet dude, I fiexed the Details route for employee. I getting pretty good at this.

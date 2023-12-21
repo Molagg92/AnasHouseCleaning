@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace Capstone.Models;
 public class ServiceEmployeeEntity
 {
-   public int ServiceEmployeeId { get; set; }
+   public int ServiceEmployeeEntityId { get; set; }
   public int EmployeeId { get; set; }
   public Employee Employee { get; set; }
   public int ServiceId { get; set; }

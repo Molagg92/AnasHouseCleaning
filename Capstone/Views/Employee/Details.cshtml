@@ -11,24 +11,24 @@
 
 @if (@Model.ServiceEmployeeEntities.Count == 0)
 {
-  <h3> --no Services have been added to this engineer yet-- </h3>
+  <b> --No Services have been added to this Employee yet-- </b>
 } 
 else
 {
-  @* <h4>Services:</h4>
+  <h4>Services:</h4>
   <ul>
     @foreach(ServiceEmployeeEntity join in Model.ServiceEmployeeEntities)
     {
       <li>Service: @join.Service.Name-</li>
-      @using (Html.BeginForm("DeleteJoin", "Engineer"))
+      @using (Html.BeginForm("DeleteJoin", "Employee"))
       {
         @Html.Hidden("joinId", @join.ServiceEmployeeEntityId)
         <input type="submit" value="Delete"/>
       }
     }
-  </ul> *@
+  </ul>
 }
-
+<hr />
 
 <p>@Html.ActionLink("Home", "Index", "Home")</p>
 <p>@Html.ActionLink("Edit engineer or Service", "Edit", new { id = Model.EmployeeId })</p>
