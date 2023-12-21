@@ -45,3 +45,5 @@
 `5:12` made the Create route for clients and services
 
 `5:45` creating instances of these objects is turning out to be a problem
+
+`6:26` i am so tired of dealing with this wall i cant break

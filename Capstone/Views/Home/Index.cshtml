@@ -35,6 +35,18 @@
 </ul>
 <hr />
 
+@* <h4>clients</h4>
+@if (Model["clients"].Length == 0)
+{
+  <p>No clients have been added yet!</p>
+} 
+<ul>
+  @foreach (Client emp in Model["clients"])
+  {
+    <li>@Html.ActionLink(@emp.Name, "Details", "Client", new { id = @emp.ClientId})</li>
+  }
+</ul> *@
+
 <p>@Html.ActionLink("See all employees", "Index", "employee")</p> 
 <p>@Html.ActionLink("See all services", "Index", "service")</p> 
 <p>@Html.ActionLink("See all clients", "Index", "client")</p> 
