@@ -54,4 +54,7 @@
 `7:07` sweet jesus in heaven I cant belive I am actually making progress again. I forgot that home index also hada controller I should have updated!
 
 `7:54` after reading more about User authentication, i might go to bed and pick this up tommorrow morning
+=============================================================\
+
+`6:29` So it turns out I had a few migrations pending, wich was causeing a mess with my foreign key constraints in the SQL schema. I fixed it! I think I actually have a many to many with services-employees, and a one to many with clients-services!
 

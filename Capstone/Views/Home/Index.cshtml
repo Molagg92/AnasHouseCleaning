@@ -1,20 +1,23 @@
+@using Capstone.Models
+@model Capstone.ViewModels.HomeIndexViewModel
+
 @{
     Layout = "_Layout";
 }
 
-@using Capstone.Models;
+
 
 <h1>This is a test for the HOME INDEX!</h1>
 
 <hr>
 
 <h4>Employees</h4>
-@if (Model["employees"].Length == 0)
+@if (Model.Employees.Length == 0)
 {
   <p>No employees have been added yet!</p>
 } 
 <ul>
-  @foreach (Employee emp in Model["employees"])
+  @foreach (Employee emp in Model.Employees)
   {
     <li>@Html.ActionLink(@emp.Name, "Details", "Employee", new { id = @emp.EmployeeId})</li>
   }
@@ -23,12 +26,12 @@
 <hr>
 
 <h4>services</h4>
-@if (Model["services"].Length == 0)
+@if (Model.Services.Length == 0)
 {
   <p>No services have been added yet!</p>
 } 
 <ul>
-  @foreach (Service serv in Model["services"])
+  @foreach (Service serv in Model.Services)
   {
     <li>@Html.ActionLink(@serv.Name, "Details", "Service", new { id = @serv.ServiceId})</li>
   }
@@ -36,12 +39,12 @@
 <hr />
 
 <h4>clients</h4>
-@if (Model["clients"].Length == 0)
+@if (Model.Clients.Length == 0)
 {
   <p>No clients have been added yet!</p>
 } 
 <ul>
-  @foreach (Client emp in Model["clients"])
+  @foreach (Client emp in Model.Clients)
   {
     <li>@Html.ActionLink(@emp.Name, "Details", "Client", new { id = @emp.ClientId})</li>
   }

@@ -1,6 +1,6 @@
 using System.Collections.Generic;
-namespace Capstone.Models;
 
+namespace Capstone.Models;
 public class ServiceEmployeeEntity
 {
    public int ServiceEmployeeId { get; set; }

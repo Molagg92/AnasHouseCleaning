@@ -2,6 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Capstone.Models;
 using System.Collections.Generic;
 using System.Linq;
+using Capstone.ViewModels; 
 
 namespace Capstone.Controllers
 {
@@ -16,14 +17,13 @@ namespace Capstone.Controllers
     [HttpGet("/")]
     public ActionResult Index()
     { 
-      Employee[] empls =_db.Employees.ToArray();
-      Service[] servs = _db.Services.ToArray();
-      Client[] clies = _db.Clients.ToArray();
-      Dictionary<string,object[]> model = new Dictionary<string, object[]>();
-      model.Add("employees", empls);
-      model.Add("services", servs);
-      model.Add("clients", clies);
+      var model = new HomeIndexViewModel
+      {
+          Employees = _db.Employees.ToArray(),
+          Services = _db.Services.ToArray(),
+          Clients = _db.Clients.ToArray()
+      };
       return View(model);
     }
-  }
+} 
 }
