@@ -9,36 +9,34 @@ namespace Caspstone.Controllers
 {
     public class ServiceController : Controller
     {
-       private readonly CapstonePageContext _db;
-        public ServiceController(CapstonePageContext db)
-        {
-          _db = db;
-        }
-    public ActionResult Index()
-        {
+      private readonly CapstonePageContext _db;
+      public ServiceController(CapstonePageContext db)
+      {
+        _db = db;
+      }
+      public ActionResult Index()
+      {
         List<Service> model = _db.Services.ToList();
         return View(model);
-        }
+      }
 
-        public ActionResult Create()
-        {
-        return View();
-        }
-
-        [HttpPost]
-        public ActionResult Create(Service service)
-        {
-          if (!ModelState.IsValid)
-          { 
-            return View(service);
-          }
-          else
-          {
-          _db.Services.Add(service);
-          _db.SaveChanges();
-          return RedirectToAction("Index");
-          }
-        }
+         [HttpPost]
+    public ActionResult Create(int clientId, string serviceName)
+    {
+      var client = _db.Clients.FirstOrDefault(c => c.ClientId == clientId);
+      if (client == null)
+      {
+        return RedirectToAction("Index", "Home");
+      }
+      var newService = new Service
+      {
+        Name = serviceName,
+        ClientId = clientId  
+      };
+      _db.Services.Add(newService);
+      _db.SaveChanges();
+      return RedirectToAction("Details", "Client", new { id = clientId });
     }
+  }
 }
 
