@@ -1,0 +1,37 @@
+@{
+  Layout = "_Layout";
+}
+
+@using Capstone.Models
+@model Capstone.Models.Client
+
+<h2>Client Details</h2>
+<hr />
+<h3>@Html.DisplayFor(model => model.Name)</h3>  
+
+@if (@Model.Services.Count == 0)
+{
+  <b> --No Services have been added to this Client yet-- </b>
+} 
+else
+{
+  <h4>Services:</h4>
+  <ul>
+    @foreach (Service service in Model.Services)
+    {
+      <li>Service: @service.Name-</li>
+      @using (Html.BeginForm("DeleteJoin", "Client"))
+      {
+        @Html.Hidden("clientId", @Model.ClientId)
+        @Html.Hidden("serviceId", @service.ServiceId)
+        <input type="submit" value="Delete"/>
+      }
+    }
+  </ul>
+}
+<hr />
+
+<p>@Html.ActionLink("Home", "Index", "Home")</p>
+<p>@Html.ActionLink("Edit Employee or Service", "Edit", new { id = Model.ClientId })</p>
+<p>@Html.ActionLink("Delete Employee", "Delete", new { id = Model.ClientId })</p>
+<p>@Html.ActionLink("Add a Service", "AddService", new { id = Model.ClientId })</p>

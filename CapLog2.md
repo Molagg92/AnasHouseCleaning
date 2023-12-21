@@ -67,3 +67,5 @@
 `9:30` sweet dude, I fiexed the Details route for employee. I getting pretty good at this.
 
 `9:55` made the delete route on my employee, so far so good.
+
+`10:56` reading about authentication/authorization
