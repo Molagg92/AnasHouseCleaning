@@ -52,3 +52,6 @@
 
 
 `7:07` sweet jesus in heaven I cant belive I am actually making progress again. I forgot that home index also hada controller I should have updated!
+
+`7:54` after reading more about User authentication, i might go to bed and pick this up tommorrow morning
+
