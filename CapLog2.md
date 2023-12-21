@@ -49,3 +49,6 @@
 `6:26` i am so tired of dealing with this wall i cant break
 
 `6:51` dude it wasnt working because I am super dumb, it just didnt know what to do with the rest od the info in with the one to one relathinship
+
+
+`7:07` sweet jesus in heaven I cant belive I am actually making progress again. I forgot that home index also hada controller I should have updated!

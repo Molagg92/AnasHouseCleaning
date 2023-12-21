@@ -18,9 +18,11 @@ namespace Capstone.Controllers
     { 
       Employee[] empls =_db.Employees.ToArray();
       Service[] servs = _db.Services.ToArray();
+      Client[] clies = _db.Clients.ToArray();
       Dictionary<string,object[]> model = new Dictionary<string, object[]>();
       model.Add("employees", empls);
       model.Add("services", servs);
+      model.Add("clients", clies);
       return View(model);
     }
   }
