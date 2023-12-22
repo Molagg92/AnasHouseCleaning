@@ -7,20 +7,20 @@ using Capstone.Models;
 
 namespace Caspstone.Controllers
 {
-    public class ServiceController : Controller
+  public class ServiceController : Controller
+  {
+    private readonly CapstonePageContext _db;
+    public ServiceController(CapstonePageContext db)
     {
-      private readonly CapstonePageContext _db;
-      public ServiceController(CapstonePageContext db)
-      {
-        _db = db;
-      }
-      public ActionResult Index()
-      {
-        List<Service> model = _db.Services.ToList();
-        return View(model);
-      }
+      _db = db;
+    }
+    public ActionResult Index()
+    {
+      List<Service> model = _db.Services.ToList();
+      return View(model);
+    }
 
-         [HttpPost]
+    [HttpPost]
     public ActionResult Create(int clientId, string serviceName)
     {
       var client = _db.Clients.FirstOrDefault(c => c.ClientId == clientId);
@@ -36,6 +36,20 @@ namespace Caspstone.Controllers
       _db.Services.Add(newService);
       _db.SaveChanges();
       return RedirectToAction("Details", "Client", new { id = clientId });
+    }
+    public ActionResult Details(int id)
+    {
+      var service = _db.Services
+          .Include(s => s.ServiceEmployeeEntities)
+          .ThenInclude(se => se.Employee)
+          .FirstOrDefault(s => s.ServiceId == id);
+
+      if (service == null)
+      {
+          return NotFound();
+      }
+
+      return View(service);
     }
   }
 }

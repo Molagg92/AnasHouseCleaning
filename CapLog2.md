@@ -79,3 +79,7 @@
 `12:49` made the delete
 
 `1:56`  made create with service
+
+==========================================\
+
+`6:27` fixed the damn details route for the Services. Holy Guacamole that was a challange.
