@@ -18,19 +18,19 @@ _A list of Clients, employees, Services, and a calandar to tie it all togetehr!_
 
 ## Setup/Installation Requirements
 
-* `git clone https://github.com/Molagg92/AnasHouseCleaning.git`Using this comman in the desktop directory will clone down the project to your machine.
-* You will want to navigate to teh project directory type comman `cd AnasHouseCleaning` from the Desktop directory
-* Once inside the project folder "Capstone", build an appsettings.json file, copy the following into it (replace the password with your server MySQL server passwor)_
+* `$ git clone https://github.com/Molagg92/AnasHouseCleaning.git`Using this comman in the desktop directory will clone down the project to your machine.
+* You will want to navigate to teh project directory type comman `$ cd AnasHouseCleaning` from the Desktop directory
+* from `AnasHouseCleaning` directory, give comman `$ cd Capstone` to cahnge directories into the actual project folder. Build an `appsettings.json` file, copy the following into it (replace the password with your server MySQL server passwor)_
 * ```
   {
     "ConnectionStrings": {
-      "DefaultConnection": "Server=localhost;Port=3306;database=capstone_page;uid=root;pwd=[!Yourpassword!];"
+      "DefaultConnection": "Server=localhost;Port=3306;database=capstone_page;uid=root;pwd=[Yourpassword!];"
     }
   } 
 * _After this, give commane `$ dotnet ef database update` for the databade_ 
-* _Then type `dotnet build` in your terminal to make sure everything is up to date and there are no errors_
-* _Then launch the webpage by typing `dotnet watch run --launch-profile "production"` in the teminal_
-* _For issuing and trusting a security certificate, type `dotnet dev-certs https --trust` in the terminal and restart your browser_
+* _Then type `$ dotnet build` in your terminal to make sure everything is up to date and there are no errors_
+* _Then launch the webpage by typing `$ dotnet watch run --launch-profile "production"` in the teminal_
+* _For issuing and trusting a security certificate, type `$ dotnet dev-certs https --trust` in the terminal and restart your browser_
 
 ## Known Bugs
 
