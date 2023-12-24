@@ -73,7 +73,26 @@ namespace Capstone.Controllers
       _db.SaveChanges();
       return RedirectToAction("Index");
     }
-   } 
+    public ActionResult AddService(int id)
+    {
+      Employee thisEmployee = _db.Employees.FirstOrDefault(employee => employee.EmployeeId == id);
+      ViewBag.ServiceId = new SelectList(_db.Services, "ServiceId", "Name");
+      return View(thisEmployee);
+    }
+    [HttpPost]
+    public ActionResult AddService(Employee employee, int serviceId)
+    {
+      #nullable enable
+      ServiceEmployeeEntity? joinEntity = _db.ServiceEmployeeEntities.FirstOrDefault(join => (join.ServiceId == serviceId && join.EmployeeId == employee.EmployeeId));
+      #nullable disable
+      if (joinEntity == null && serviceId != 0)
+      {
+        _db.ServiceEmployeeEntities.Add(new ServiceEmployeeEntity() {ServiceId = serviceId, EmployeeId = employee.EmployeeId });
+        _db.SaveChanges();
+      }
+      return RedirectToAction("Details", new { id = employee.EmployeeId });
+    } 
+  } 
 }
 
 

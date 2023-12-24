@@ -9,7 +9,7 @@
 <hr />
 <h3>@Html.DisplayFor(model => model.Name)</h3>  
 
-@if (@Model.Services.Count == 0)
+@* @if (@Model.Services.Count == 0)
 {
   <b> --No Services have been added to this Client yet-- </b>
 } 
@@ -20,7 +20,7 @@ else
     @foreach (Service service in Model.Services)
     {
       <li>Service: @service.Name-</li>
-      @using (Html.BeginForm("DeleteJoin", "Client"))
+      @using (Html.BeginForm("Delete", "Client"))
       {
         @Html.Hidden("clientId", @Model.ClientId)
         @Html.Hidden("serviceId", @service.ServiceId)
@@ -28,7 +28,21 @@ else
       }
     }
   </ul>
+} *@
+
+
+@if (Model.Services.Count > 0)
+{
+    <h4>Services:</h4>
+    <ul>
+      @foreach (Service service in Model.Services)
+      {
+        <li>@Html.ActionLink($"{service.Name}", "Details", "Service", new { id = service.ServiceId }) ID# @service.ServiceId</li>
+
+      }
+    </ul>
 }
+
 
 <hr />
 @using (Html.BeginForm("Create", "Service", FormMethod.Post))

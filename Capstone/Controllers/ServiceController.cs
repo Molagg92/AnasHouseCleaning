@@ -51,6 +51,42 @@ namespace Caspstone.Controllers
 
       return View(service);
     }
+
+  public ActionResult Edit(int id)
+    {
+      Service thisService = _db.Services.FirstOrDefault(service => service.ServiceId == id);
+      return View(thisService);
+    }
+  [HttpPost]
+    public ActionResult Edit(Service service, int clientId)
+    {
+      service.ClientId = clientId;
+      _db.Services.Update(service);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    public ActionResult Delete(int id)
+    {
+      Service thisService = _db.Services.FirstOrDefault(service => service.ServiceId == id);
+      return View(thisService);
+    }
+
+    [HttpPost, ActionName("Delete")]
+    public ActionResult DeleteConfirmed(int id)
+    {
+      Service thisService = _db.Services.FirstOrDefault(service => service.ServiceId == id);
+      _db.Services.Remove(thisService);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
+    [HttpPost]
+    public ActionResult DeleteJoin(int joinId)
+    {
+      ServiceEmployeeEntity joinEntry = _db.ServiceEmployeeEntities.FirstOrDefault(entry => entry.ServiceEmployeeEntityId == joinId);
+      _db.ServiceEmployeeEntities.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    } 
   }
 }
 
