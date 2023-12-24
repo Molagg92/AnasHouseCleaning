@@ -88,3 +88,5 @@
 ==========================================\
 
 `9:04` Man I really slacked off with the Logs, I have no idea how much ive dont without saying anything. Uhhh.... so the service details works, so does edit, delete and joing with Employees also works now. also deleteing the join. you can assign employees and remeove them from services. bro, this thing is really getting somewhere.
+
+`9:31` I got the join and delete routes working! this baby is kind of .... at a good spot

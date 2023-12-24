@@ -1,0 +1,21 @@
+@{
+  Layout = "_Layout";
+}
+
+@model Capstone.Models.Service
+
+<h2>Add a Service</h2>
+
+<h4>Add an Employee to this Service: @Html.DisplayFor(model => model.Name)</h4>
+
+@using (Html.BeginForm())
+{
+    @Html.HiddenFor(model => model.ServiceId)
+
+    @Html.Label("Select employee")
+    @Html.DropDownList("EmployeeId")
+
+    <input type="submit" value="Save" />
+}
+
+<p>@Html.ActionLink("Back to list", "Index")</p>

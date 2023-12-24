@@ -91,7 +91,15 @@ namespace Capstone.Controllers
         _db.SaveChanges();
       }
       return RedirectToAction("Details", new { id = employee.EmployeeId });
-    } 
+    }
+    [HttpPost]
+    public ActionResult DeleteJoin(int joinId)
+    {
+      ServiceEmployeeEntity joinEntry = _db.ServiceEmployeeEntities.FirstOrDefault(entry => entry.ServiceEmployeeEntityId == joinId);
+      _db.ServiceEmployeeEntities.Remove(joinEntry);
+      _db.SaveChanges();
+      return RedirectToAction("Index");
+    }
   } 
 }
 
